@@ -16,7 +16,7 @@
  
 (function(){
 	
-	// private variables, global for all functions within this closure
+	// private variables, global for all instances of the functions within this closure
 	var max_loaded_id = 0;
 	var loaded_elements = [];
 
