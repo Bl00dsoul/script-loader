@@ -153,7 +153,7 @@
 				} else {
 					// delete based on url
 
-					ids.forEach(function( id ){
+					ids.forEach( function( id ){
 						if( isset(element_list[id]) && isset(element_list[id].src) ){
 							if( element_list[id].src == identifier ){
 
