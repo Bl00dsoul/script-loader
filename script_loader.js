@@ -109,7 +109,7 @@
 						script.type = "text/javascript";
 						script.onreadystatechange = function () {		// IE compatibility mode
 							if (this.readyState == 'complete'){
-								if( isset(callback) && typeof(callback) == function){
+								if( isset(callback) && typeof(callback) == "function" ){
 									callback();
 								}
 							}
