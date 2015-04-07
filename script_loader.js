@@ -25,9 +25,11 @@
 
 		// private functions
 		function isNumber(n) {
+			// returns true if n is a number
 			return !isNaN(parseFloat(n)) && isFinite(n);
 		}
 		function isset( argument ){
+			// returns true if argument has a value
 			if( typeof(argument) !== 'undefined' ){
 				if( isNumber(argument) ){
 					return true;
