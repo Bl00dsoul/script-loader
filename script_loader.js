@@ -86,7 +86,7 @@
 			"get_ids" : function(){
 				return get_loaded_ids();
 			},
-			"load" : function( url ){
+			"load" : function( url, callback ){
 				// add the script / stylesheet 'url' to the <head>
 		
 				if( !isset(url) ){
@@ -107,6 +107,14 @@
 						var script = document.createElement("script");
 						script.src = url;
 						script.type = "text/javascript";
+						script.onreadystatechange = function () {		// IE compatibility mode
+							if (this.readyState == 'complete'){
+								if( isset(callback) && typeof(callback) == function){
+									callback();
+								}
+							}
+						}
+						script.onload = callback;
 						var ref = document.getElementsByTagName('head')[0].insertBefore(script, loading_element);
 					 break;
 					case "css":
