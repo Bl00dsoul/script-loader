@@ -123,6 +123,7 @@
 						var css = document.createElement("link");
 						css.href = url;
 						css.type = "text/css";
+						css.rel  = 'stylesheet';
 						var ref = document.getElementsByTagName('head')[0].insertBefore(css, loading_element);
 					 break;
 					default:
