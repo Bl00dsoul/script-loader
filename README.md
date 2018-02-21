@@ -12,7 +12,7 @@ var id = loader.load( './js/script.js', function(){
 
 ### unloading  
 ```
-       loader.unload( id );
-       // or
-       loader.unload( url );
+loader.unload( id );
+// or
+loader.unload( url );
 ```
