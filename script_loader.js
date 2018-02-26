@@ -71,7 +71,7 @@
 			// return an array of all ids of the reference objects in the loaded_elements array
 		
 			var id_array = [];
-			for( i = 0; i <= max_loaded_id; i++ ){
+			for( var i = 0; i <= max_loaded_id; i++ ){
 				if( isset(loaded_elements[i]) && isset( loaded_elements[i].id ) ){
 					id_array.push( loaded_elements[i].id );
 				}
